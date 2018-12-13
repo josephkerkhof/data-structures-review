@@ -62,7 +62,7 @@ public class LinkedList
             }
             current = current.next; // Iterate thru the linked list
         }
-        Console.WriteLine($"{value} was not found in the linked list.");
+        throw new System.Exception($"{value} was not found in the linked list.");
     }
 
     public bool Contains(int value)
@@ -79,14 +79,16 @@ public class LinkedList
         return false;
     }
 
-    public void ToString()
+    public String ToString()
     {
+        String str = "";
         Node current = head;
         while(current != null)
         {
-            Console.Write($"{current.value} -> ");
+            str += current.value + " -> ";
             current = current.next;
         }
-        Console.Write("null\n");
+        str += "null";
+        return str;
     }
 }

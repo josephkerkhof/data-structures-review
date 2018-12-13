@@ -10,10 +10,23 @@ namespace DataStructures
 
             Console.WriteLine("Welcome to my data structures review project.");
 
-            p.RunTheLinkedList();
+            //p.RunTheLinkedList();
+            p.RunTheDoublyLinkedList();
 
             Console.WriteLine("Press any key to quit...");
             Console.ReadKey(true);
+        }
+
+        private void RunTheDoublyLinkedList()
+        {
+            DoublyLinkedList dll = new DoublyLinkedList(1);
+            // Inserting a few variables
+            dll.Insert(4);
+            dll.Insert(2);
+            dll.Insert(17);
+            dll.ToString();
+            dll.Insert(3);
+            dll.ToString();
         }
 
         private void RunTheLinkedList()
